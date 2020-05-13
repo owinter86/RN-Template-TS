@@ -34,6 +34,9 @@ static void InitializeFlipper(UIApplication *application) {
   InitializeFlipper(application);
 #endif
 
+  // https://docs.bugsnag.com/platforms/react-native/react-native/enhanced-native-integration/#native-configuration
+  [BugsnagReactNative start];
+
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
                                                    moduleName:@"LightbaseTemplate"
@@ -64,11 +67,3 @@ static void InitializeFlipper(UIApplication *application) {
   return [CodePush bundleURL];
 #endif
 }
-
-// https://docs.bugsnag.com/platforms/react-native/react-native/enhanced-native-integration/#native-configuration
-- (BOOL)application:(UIApplication *)application
-didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [BugsnagReactNative start];
-}
-
-@end
