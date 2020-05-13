@@ -67,3 +67,6 @@ static void InitializeFlipper(UIApplication *application) {
   return [CodePush bundleURL];
 #endif
 }
+
+@end
+
