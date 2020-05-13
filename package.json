@@ -1,0 +1,26 @@
+{
+  "name": "react-native-template-owinter",
+  "version": "0.0.1",
+  "description": "React Native Starter project structure with typescript",
+  "files": [
+    "template",
+    "template.config.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/owinter86/RN-Template-TS"
+  },
+  "keywords": [
+    "react-native",
+    "typescript",
+    "jest",
+    "template",
+    "boilerplate"
+  ],
+  "author": "Oliver Winter <owinter86@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/owinter86/RN-Template-TS/issues"
+  },
+  "homepage": "https://github.com/owinter86/RN-Template-TS/issues#readme"
+}
