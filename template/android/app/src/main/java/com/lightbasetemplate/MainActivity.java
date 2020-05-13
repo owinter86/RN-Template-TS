@@ -30,7 +30,6 @@ public class MainActivity extends ReactActivity {
       };
   }
 
-  // Hides thumbnail on app list screen
   @Override
   protected void onCreate(Bundle savedInstanceState) {
       // https://github.com/software-mansion/react-native-screens/issues/17#issuecomment-557939158
