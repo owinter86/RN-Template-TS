@@ -23,9 +23,7 @@ const App = () => {
   React.useEffect(() => {
     const handleAppStateChange = (state: AppStateStatus) => {
       if (state === "active") {
-        if (!__DEV__) {
-          checkCodepush();
-        }
+        checkCodepush();
       }
     };
 

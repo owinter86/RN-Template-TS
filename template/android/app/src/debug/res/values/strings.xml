@@ -1,4 +1,3 @@
 <resources>
     <string name="app_name">LightbaseTemplate Dev</string>
-    <string moduleConfig="true" name="CodePushDeploymentKey">""</string>
 </resources>

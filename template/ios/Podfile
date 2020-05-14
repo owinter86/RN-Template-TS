@@ -8,6 +8,8 @@ target 'LightbaseTemplate' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+  pod 'react-native-flipper', :path => '../node_modules/react-native-flipper/react-native-flipper.podspec', :configuration => 'Debug'
+
   target 'LightbaseTemplateTests' do
     inherit! :complete
     # Pods for testing

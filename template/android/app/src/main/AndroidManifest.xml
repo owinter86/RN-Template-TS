@@ -11,6 +11,9 @@
     android:allowBackup="false"
     android:theme="@style/AppTheme">
 
+    <!-- https://docs.bugsnag.com/platforms/react-native/react-native/enhanced-native-integration/#native-configuration -->
+    <meta-data android:name="com.bugsnag.android.API_KEY" android:value="@string/BUGSNAG_API"/>
+
     <activity
       android:name=".MainActivity"
       android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
@@ -31,10 +34,6 @@
     </activity>
 
     <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
-
-    <!-- https://docs.bugsnag.com/platforms/react-native/react-native/enhanced-native-integration/#native-configuration -->
-    <meta-data android:name="com.bugsnag.android.API_KEY"
-      android:value="YOUR-API-KEY-HERE"/>
 
     </application>
 

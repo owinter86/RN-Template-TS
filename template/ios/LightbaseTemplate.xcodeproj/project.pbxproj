@@ -12,6 +12,7 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		95FA3D76246D4CAC006118F2 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 95FA3D75246D4CAC006118F2 /* Config.xcconfig */; };
 		A34CCEE023F71E551BE4E4C4 /* libPods-LightbaseTemplate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 414CB18F9ACF341BE92DD265 /* libPods-LightbaseTemplate.a */; };
 		E929907BD9FC8A3BEA08FFA7 /* libPods-LightbaseTemplate-LightbaseTemplateTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A9F7868F35E6748534B88C8 /* libPods-LightbaseTemplate-LightbaseTemplateTests.a */; };
 /* End PBXBuildFile section */
@@ -32,8 +33,6 @@
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* LightbaseTemplateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LightbaseTemplateTests.m; sourceTree = "<group>"; };
 		07561F0F0D64F7F7E8CEAC96 /* Pods-LightbaseTemplate-LightbaseTemplateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightbaseTemplate-LightbaseTemplateTests.release.xcconfig"; path = "Target Support Files/Pods-LightbaseTemplate-LightbaseTemplateTests/Pods-LightbaseTemplate-LightbaseTemplateTests.release.xcconfig"; sourceTree = "<group>"; };
-		0BEE7333739E896BFFF538D3 /* libPods-LightbaseTemplate-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LightbaseTemplate-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0CB1E74A7496D33166681524 /* Pods-LightbaseTemplate-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightbaseTemplate-tvOS.release.xcconfig"; path = "Target Support Files/Pods-LightbaseTemplate-tvOS/Pods-LightbaseTemplate-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* LightbaseTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LightbaseTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = LightbaseTemplate/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = LightbaseTemplate/AppDelegate.m; sourceTree = "<group>"; };
@@ -41,21 +40,16 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = LightbaseTemplate/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = LightbaseTemplate/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = LightbaseTemplate/main.m; sourceTree = "<group>"; };
-		2CADEC17E8E563E528566932 /* Pods-LightbaseTemplate-tvOS.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightbaseTemplate-tvOS.staging.xcconfig"; path = "Target Support Files/Pods-LightbaseTemplate-tvOS/Pods-LightbaseTemplate-tvOS.staging.xcconfig"; sourceTree = "<group>"; };
 		31E6756805F376D8AD0F05D1 /* Pods-LightbaseTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightbaseTemplate.release.xcconfig"; path = "Target Support Files/Pods-LightbaseTemplate/Pods-LightbaseTemplate.release.xcconfig"; sourceTree = "<group>"; };
 		382507AD012ADF9B7926B7B7 /* Pods-LightbaseTemplate-LightbaseTemplateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightbaseTemplate-LightbaseTemplateTests.debug.xcconfig"; path = "Target Support Files/Pods-LightbaseTemplate-LightbaseTemplateTests/Pods-LightbaseTemplate-LightbaseTemplateTests.debug.xcconfig"; sourceTree = "<group>"; };
 		414CB18F9ACF341BE92DD265 /* libPods-LightbaseTemplate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LightbaseTemplate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9F7868F35E6748534B88C8 /* libPods-LightbaseTemplate-LightbaseTemplateTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LightbaseTemplate-LightbaseTemplateTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		717706FDD4AE5A0C6953ADD4 /* Pods-LightbaseTemplate-LightbaseTemplateTests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightbaseTemplate-LightbaseTemplateTests.staging.xcconfig"; path = "Target Support Files/Pods-LightbaseTemplate-LightbaseTemplateTests/Pods-LightbaseTemplate-LightbaseTemplateTests.staging.xcconfig"; sourceTree = "<group>"; };
 		843C65BBFF61B082F5C84835 /* Pods-LightbaseTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightbaseTemplate.debug.xcconfig"; path = "Target Support Files/Pods-LightbaseTemplate/Pods-LightbaseTemplate.debug.xcconfig"; sourceTree = "<group>"; };
-		864842C618AEE0E0F264F0AD /* Pods-LightbaseTemplate-tvOSTests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightbaseTemplate-tvOSTests.staging.xcconfig"; path = "Target Support Files/Pods-LightbaseTemplate-tvOSTests/Pods-LightbaseTemplate-tvOSTests.staging.xcconfig"; sourceTree = "<group>"; };
-		BAE0ED3801A840F6E3512BFF /* Pods-LightbaseTemplate-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightbaseTemplate-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-LightbaseTemplate-tvOS/Pods-LightbaseTemplate-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		CA9C7BA75A066AE79E228525 /* libPods-LightbaseTemplate-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LightbaseTemplate-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95FA3D75246D4CAC006118F2 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		EFE8958EF82F30D85132F21F /* Pods-LightbaseTemplate.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightbaseTemplate.staging.xcconfig"; path = "Target Support Files/Pods-LightbaseTemplate/Pods-LightbaseTemplate.staging.xcconfig"; sourceTree = "<group>"; };
-		F10257257557A54298314672 /* Pods-LightbaseTemplate-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightbaseTemplate-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-LightbaseTemplate-tvOSTests/Pods-LightbaseTemplate-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		F22F9502DB327F859477D3D5 /* Pods-LightbaseTemplate-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightbaseTemplate-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-LightbaseTemplate-tvOSTests/Pods-LightbaseTemplate-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,8 +110,6 @@
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				414CB18F9ACF341BE92DD265 /* libPods-LightbaseTemplate.a */,
 				5A9F7868F35E6748534B88C8 /* libPods-LightbaseTemplate-LightbaseTemplateTests.a */,
-				CA9C7BA75A066AE79E228525 /* libPods-LightbaseTemplate-tvOS.a */,
-				0BEE7333739E896BFFF538D3 /* libPods-LightbaseTemplate-tvOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -132,6 +124,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				95FA3D75246D4CAC006118F2 /* Config.xcconfig */,
 				13B07FAE1A68108700A75B9A /* LightbaseTemplate */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* LightbaseTemplateTests */,
@@ -160,14 +153,8 @@
 				31E6756805F376D8AD0F05D1 /* Pods-LightbaseTemplate.release.xcconfig */,
 				382507AD012ADF9B7926B7B7 /* Pods-LightbaseTemplate-LightbaseTemplateTests.debug.xcconfig */,
 				07561F0F0D64F7F7E8CEAC96 /* Pods-LightbaseTemplate-LightbaseTemplateTests.release.xcconfig */,
-				BAE0ED3801A840F6E3512BFF /* Pods-LightbaseTemplate-tvOS.debug.xcconfig */,
-				0CB1E74A7496D33166681524 /* Pods-LightbaseTemplate-tvOS.release.xcconfig */,
-				F22F9502DB327F859477D3D5 /* Pods-LightbaseTemplate-tvOSTests.debug.xcconfig */,
-				F10257257557A54298314672 /* Pods-LightbaseTemplate-tvOSTests.release.xcconfig */,
 				EFE8958EF82F30D85132F21F /* Pods-LightbaseTemplate.staging.xcconfig */,
 				717706FDD4AE5A0C6953ADD4 /* Pods-LightbaseTemplate-LightbaseTemplateTests.staging.xcconfig */,
-				2CADEC17E8E563E528566932 /* Pods-LightbaseTemplate-tvOS.staging.xcconfig */,
-				864842C618AEE0E0F264F0AD /* Pods-LightbaseTemplate-tvOSTests.staging.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -265,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				95FA3D76246D4CAC006118F2 /* Config.xcconfig in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

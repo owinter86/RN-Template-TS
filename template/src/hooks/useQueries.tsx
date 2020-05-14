@@ -1,4 +1,4 @@
-import React from "../../__tests__ /node_modules/react";
+import React from "react;
 
 export const queryConfig = {
   throwOnError: true,
