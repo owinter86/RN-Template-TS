@@ -11,8 +11,8 @@
     "iosStaging": "ENVFILE=.env.staging react-native run-ios --configuration=staging",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint 'app/**/*.{ts,tsx}'",
-    "pretty": "prettier --check 'app/**/*.{ts,tsx}' --write",
+    "lint": "eslint 'src/**/*.{ts,tsx}'",
+    "pretty": "prettier --check 'src/**/*.{ts,tsx}' --write",
     "tsCheck": "tsc -p ./",
     "postinstall": "patch-package"
   },
