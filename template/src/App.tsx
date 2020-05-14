@@ -5,6 +5,8 @@ import { ReactQueryConfigProvider } from 'react-query';
 import { enableScreens } from 'react-native-screens';
 import RNBootSplash from 'react-native-bootsplash';
 import codepush from 'react-native-code-push';
+import Config from 'react-native-config';
+
 import initDevEnvironment from './utils/initDevEnvironment';
 import { queryConfig } from './hooks/useQueries';
 
@@ -33,6 +35,7 @@ const App = () => {
 
   React.useEffect(() => {
     RNBootSplash.hide({ duration: 250 });
+    console.log({ Config });
   }, []);
 
   return (
