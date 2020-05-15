@@ -1,0 +1,7 @@
+git_url("GIT_URL_WHERE_PROFILES_ARE_MANAGED")
+type("development") # The default type, can be: appstore, adhoc, enterprise or development
+team_name("INSERT_TEAM_NAME_FROM_APPSTORECONNECT")
+app_identifier(["com.lightbasetemplate", "com.lightbasetemplate.staging"])
+
+# For all available options run `fastlane match --help`
+# Remove the # in the beginning of the line to enable the other options
