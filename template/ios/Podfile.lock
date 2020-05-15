@@ -319,7 +319,7 @@ PODS:
     - React-jsi (= 0.63.0-rc.1)
   - RNBootSplash (2.2.4):
     - React
-  - RNCAsyncStorage (1.10.0):
+  - RNCAsyncStorage (1.10.1):
     - React
   - RNCMaskedView (0.1.10):
     - React
@@ -552,7 +552,7 @@ SPEC CHECKSUMS:
   React-RCTVibration: b630e8fd023809796d47917d27caa343ade0678d
   ReactCommon: 6d0c6086911f7bf87b8406a92bb2ec66aeefd2e1
   RNBootSplash: 7cb9b4fe7e94177edc0d11010f7631d79db2f5e9
-  RNCAsyncStorage: 6d99641f8e6f15d169d695d8ef184bf187903f11
+  RNCAsyncStorage: 39831e0dc5f547a1fb2669eb9e091d460a9be2be
   RNCMaskedView: 5a8ec07677aa885546a0d98da336457e2bea557f
   RNDeviceInfo: e2102056bde3ad5d137fd029d8d431510a00486a
   RNGestureHandler: 8f09cd560f8d533eb36da5a6c5a843af9f056b38
