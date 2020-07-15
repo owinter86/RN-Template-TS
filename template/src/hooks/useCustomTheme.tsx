@@ -56,6 +56,5 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
 export function useCustomTheme() {
   const theme = React.useContext(ThemeContext);
-
   return theme;
 }

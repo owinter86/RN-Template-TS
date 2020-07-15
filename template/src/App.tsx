@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, AppState, AppStateStatus } from 'react-native';
+import { View, Text, AppState, AppStateStatus, StatusBar, Platform } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ReactQueryConfigProvider } from 'react-query';
 import { enableScreens } from 'react-native-screens';
@@ -8,7 +8,9 @@ import codepush from 'react-native-code-push';
 import Config from 'react-native-config';
 
 import initDevEnvironment from './utils/initDevEnvironment';
-import { queryConfig } from './hooks/useQueries';
+import { globalReactQueryConfig } from './api';
+import bugsnag from './services/bugsnag';
+import { ThemeProvider } from './hooks/useCustomTheme';
 
 enableScreens();
 initDevEnvironment();
@@ -38,12 +40,30 @@ const App = () => {
     console.log({ Config });
   }, []);
 
+  React.useEffect(() => {
+    codepush.getUpdateMetadata().then((update) => {
+      if (update) {
+        bugsnag.config.codeBundleId = `codepush:${update.label}`;
+      }
+    });
+  }, []);
+
+  React.useEffect(() => {
+    StatusBar.setBarStyle('dark-content');
+    if (Platform.OS === 'android') {
+      StatusBar.setTranslucent(true);
+      StatusBar.setBackgroundColor('transparent');
+    }
+  }, []);
+
   return (
-    <ReactQueryConfigProvider config={queryConfig}>
+    <ReactQueryConfigProvider config={globalReactQueryConfig}>
       <SafeAreaProvider>
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-          <Text>WELCOME</Text>
-        </View>
+        <ThemeProvider>
+          <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <Text>WELCOME</Text>
+          </View>
+        </ThemeProvider>
       </SafeAreaProvider>
     </ReactQueryConfigProvider>
   );

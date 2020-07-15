@@ -1,32 +1,31 @@
-import { setConsole } from 'react-query';
+import { setConsole, queryCache } from 'react-query';
 import { hijackEffects } from 'stop-runaway-react-effects';
 const oldConsoleLog = console.log;
+import Reactotron from 'reactotron-react-native';
 
 export default function initDevEnvironment() {
   if (__DEV__) {
-    hijackEffects();
     const ReactotronFlipper = require('reactotron-react-native/dist/flipper');
-    const Reactotron = require('reactotron-react-native').default;
     const AsyncStorage = require('@react-native-community/async-storage').default;
 
-    console.log = (...args) => {
-      oldConsoleLog(...args);
-      Reactotron.log(...args);
-    };
+    const devTool = require('react-query-native-devtools');
+    devTool.addPlugin(queryCache);
 
-    Reactotron.setAsyncStorageHandler(AsyncStorage);
     Reactotron.configure({
-      name: 'Etos+',
+      name: 'React Native App',
       createSocket: (path) => new ReactotronFlipper(path),
-    }); // controls connection & communication settings
+    })
+      .setAsyncStorageHandler?.(AsyncStorage)
+      .useReactNative()
+      .connect?.()
+      .clear?.();
 
-    Reactotron.useReactNative(); // add all built-in react native plugins
-    Reactotron.connect(); // let's connect!
-    Reactotron.clear(); // let's connect!
-    // const snoopy = require('./app/utils/snoopy');
-    // snoopy.ReanimatedModule();
-    // snoopy.logCteateViews();
-    // snoopy.logUpdateViews();
+    hijackEffects();
+
+    console.log = (...args: any) => {
+      oldConsoleLog(...args);
+      Reactotron?.log?.(...args);
+    };
   } else {
     setConsole({
       log: () => {},

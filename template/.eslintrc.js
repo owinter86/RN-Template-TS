@@ -13,7 +13,6 @@ module.exports = {
           ['components', './src/components'],
           ['context', './src/context'],
           ['hooks', './src/hooks'],
-          ['mock', './src/mock'],
           ['navigation', './src/navigation'],
           ['screens', './src/screens'],
           ['services', './src/services'],
