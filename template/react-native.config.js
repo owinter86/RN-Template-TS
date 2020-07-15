@@ -1,10 +1,4 @@
 module.exports = {
-  dependencies: {
-    'react-native-flipper': {
-      platforms: {
-        ios: null,
-      },
-    },
-  },
+  dependencies: {},
   assets: ['./src/assets/fonts'],
 };
