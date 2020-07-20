@@ -3,7 +3,7 @@ apply plugin: "com.android.application"
 import com.android.build.OutputFile
 
 project.ext.envConfigFiles = [
-    debug: ".env",
+    debug: ".env.staging",
     staging: ".env.staging",
     release: ".env.production",
 ]
