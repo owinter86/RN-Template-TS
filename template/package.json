@@ -17,6 +17,10 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
+    "@react-native-community/async-storage": "^1.11.0",
+    "@react-native-community/netinfo": "^5.9.5",
+    "@react-navigation/bottom-tabs": "^5.7.2",
+    "@react-navigation/native": "^5.7.1",
     "axios": "^0.19.2",
     "bugsnag-react-native": "^2.23.10",
     "react": "16.11.0",

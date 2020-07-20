@@ -3,7 +3,7 @@ import Config from 'react-native-config';
 
 import DeviceInfo from 'react-native-device-info';
 import { Platform } from 'react-native';
-import { ReactQueryProviderConfig, BaseQueryOptions } from 'react-query';
+import { ReactQueryProviderConfig } from 'react-query';
 import bugsnag from './services/bugsnag';
 
 const errorReporting = (error: AxiosError) => {
@@ -40,7 +40,7 @@ export const globalReactQueryConfig = {
   queries: {
     cacheTime: 60000,
     onError: errorReporting,
-  } as BaseQueryOptions<AxiosError>,
+  },
   mutations: {
     onError: errorReporting,
     throwOnError: true,

@@ -22,6 +22,7 @@ export default function initDevEnvironment() {
 
     hijackEffects();
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     console.log = (...args: any) => {
       oldConsoleLog(...args);
       Reactotron?.log?.(...args);
