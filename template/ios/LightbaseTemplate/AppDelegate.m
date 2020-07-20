@@ -7,6 +7,8 @@
 #import <CodePush/CodePush.h>
 #import <BugsnagReactNative/BugsnagReactNative.h>
 
+#import "RNBootSplash.h"
+
 #if DEBUG
 #import <FlipperKit/FlipperClient.h>
 #import <FlipperKitLayoutPlugin/FlipperKitLayoutPlugin.h>
@@ -50,10 +52,8 @@ static void InitializeFlipper(UIApplication *application) {
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
 
-  // $CUSTOM: Keep splash screen visible while bundle loads - https://reactnative.dev/docs/running-on-device#pro-tips
-  UIView* launchScreenView = [[[NSBundle mainBundle] loadNibNamed:@"LaunchScreen" owner:self options:nil] objectAtIndex:0];
-  launchScreenView.frame = self.window.bounds;
-  rootView.loadingView = launchScreenView;
+  // https://github.com/zoontek/react-native-bootsplash
+  [RNBootSplash initWithStoryboard:@"BootSplash" rootView:rootView]; // <- initialization using the storyboard file name
 
   return YES;
 }
