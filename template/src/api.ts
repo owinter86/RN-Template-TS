@@ -19,18 +19,22 @@ const errorReporting = (error: AxiosError) => {
         report.groupingHash = JSON.stringify(errorData);
       }
       report.metadata = {
-        type: 'error',
-        data: error.response?.data,
-        status: error.response?.status,
-        headers: error.response?.headers,
+        api: {
+          type: 'error',
+          data: error.response?.data,
+          status: error.response?.status,
+          headers: error.response?.headers,
+        },
       };
     });
   } else if (error.request) {
     bugsnag.notify(error, (report) => {
       report.errorClass = 'API No Response';
       report.metadata = {
-        type: 'error',
-        request: error.request,
+        api: {
+          type: 'error',
+          request: error.request,
+        },
       };
     });
   }
@@ -38,8 +42,18 @@ const errorReporting = (error: AxiosError) => {
 
 export const globalReactQueryConfig = {
   queries: {
-    cacheTime: 60000,
     onError: errorReporting,
+    retry: (failureCount, error: AxiosError) => {
+      if (error?.response?.status) {
+        if (error?.response?.status > 399 && error?.response?.status < 400) {
+          return false;
+        }
+      }
+      if (failureCount > 3) {
+        return false;
+      }
+      return true;
+    },
   },
   mutations: {
     onError: errorReporting,

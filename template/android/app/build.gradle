@@ -1,4 +1,8 @@
 apply plugin: "com.android.application"
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+apply from: "../../node_modules/react-native/react.gradle"
+apply from: "../../node_modules/react-native-code-push/android/codepush.gradle"
+apply from: '../../node_modules/react-native-unimodules/gradle.groovy'
 
 import com.android.build.OutputFile
 
@@ -11,10 +15,6 @@ project.ext.envConfigFiles = [
 project.ext.react = [
     enableHermes: true,  // clean and rebuild if changing
 ]
-
-apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
-apply from: "../../node_modules/react-native/react.gradle"
-apply from: "../../node_modules/react-native-code-push/android/codepush.gradle"
 
 /**
  * Set this to true to create two separate APKs instead of one:
@@ -66,8 +66,8 @@ android {
         resValue "string", "CodePushDeploymentKey", project.env.get("CODEPUSH_ANDROID")
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        versionCode project.versionCode as Integer
+        versionName project.versionName
     }
     splits {
         abi {
@@ -95,9 +95,8 @@ android {
             signingConfig signingConfigs.debug
         }
         release {
-            // Caution! In production, you need to generate your own keystore file.
-            // see https://reactnative.dev/docs/signed-apk-android.
-            signingConfig signingConfigs.debug
+            // APPCENTER MANAGES RELEASE SIGNING - UNCOMMENT BELOW IF RELEASE BUILD IS NEEDED LOCALLY
+            // signingConfig signingConfigs.debug
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
@@ -126,12 +125,15 @@ dependencies {
 
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
 
+    addUnimodulesDependencies()
+
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
       exclude group:'com.facebook.fbjni'
     }
 
     debugImplementation("com.facebook.flipper:flipper-network-plugin:${FLIPPER_VERSION}") {
         exclude group:'com.facebook.flipper'
+        exclude group:'com.squareup.okhttp3', module:'okhttp'
     }
 
     debugImplementation("com.facebook.flipper:flipper-fresco-plugin:${FLIPPER_VERSION}") {
