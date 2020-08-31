@@ -17,7 +17,7 @@ module.exports = {
           ['navigation', './src/navigation'],
           ['screens', './src/screens'],
           ['services', './src/services'],
-          ['utils', './src/utils*'],
+          ['utils', './src/utils'],
         ],
         extensions: ['.ts', '.js', '.jsx', '.json', '.tsx', '.native.js'],
       },

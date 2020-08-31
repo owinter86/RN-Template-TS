@@ -12,7 +12,7 @@
     android:theme="@style/AppTheme">
 
     <!-- https://docs.bugsnag.com/platforms/react-native/react-native/enhanced-native-integration/#native-configuration -->
-    <meta-data android:name="com.bugsnag.android.API_KEY" android:value="@string/BUGSNAG_API"/>
+    <meta-data android:name="com.bugsnag.android.API_KEY" android:value="@string/BUGSNAG_API_KEY"/>
 
     <activity
       android:name=".MainActivity"

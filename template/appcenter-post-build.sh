@@ -9,7 +9,7 @@ export $(egrep -v '^#' .env | xargs)
 if [ "$PLATFORM_TYPE" == "ANDROID" ]; then    
     echo "Uploading Android Source Maps..."
     npx bugsnag-sourcemaps upload \
-    --api-key=$BUGSNAG_API \
+    --api-key=$BUGSNAG_API_KEY \
     --code-bundle-id=$BUILD_NUMBER \
     --appVersion=$VERSION \
     --minifiedFile=android/app/build/generated/assets/react/$APPCENTER_ANDROID_VARIANT/index.android.bundle \
@@ -19,7 +19,7 @@ if [ "$PLATFORM_TYPE" == "ANDROID" ]; then
     --add-wildcard-prefix \
     --overwrite=true 
     npx bugsnag-sourcemaps upload \
-    --api-key=$BUGSNAG_API \
+    --api-key=$BUGSNAG_API_KEY \
     --appVersion=$VERSION \
     --minifiedFile=android/app/build/generated/assets/react/$APPCENTER_ANDROID_VARIANT/index.android.bundle \
     --source-map=android/app/build/generated/sourcemaps/react/$APPCENTER_ANDROID_VARIANT/index.android.bundle.map \
@@ -38,7 +38,7 @@ else
     --sourcemap-output ios-release.bundle.map
     echo "Uploading iOS Source Maps..."
     npx bugsnag-sourcemaps upload \
-    --api-key=$BUGSNAG_API \
+    --api-key=$BUGSNAG_API_KEY \
     --code-bundle-id=$BUILD_NUMBER \
     --minified-file ios-release.bundle \
     --source-map ios-release.bundle.map \

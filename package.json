@@ -1,6 +1,6 @@
 {
   "name": "react-native-template-owinter",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "React Native Starter project structure with typescript",
   "files": [
     "template",
