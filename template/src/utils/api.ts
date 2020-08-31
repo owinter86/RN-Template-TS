@@ -3,7 +3,7 @@ import axios, { AxiosError } from 'axios';
 import Config from 'react-native-config';
 
 import { setFocusHandler, ReactQueryConfig } from 'react-query';
-import bugsnag from './services/bugsnag';
+import bugsnag from 'services/bugsnag';
 
 import { AppState, AppStateStatus } from 'react-native';
 import { useNetInfo } from '@react-native-community/netinfo';

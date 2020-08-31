@@ -1,8 +1,8 @@
 import React, { PropsWithChildren } from 'react';
 import { ViewProps, View } from 'react-native';
 import { SafeAreaView, Edge } from 'react-native-safe-area-context';
-import { useCustomTheme } from 'src/hooks/useCustomTheme';
-import useScreenSize from 'src/hooks/useScreenSize';
+import { useCustomTheme } from 'hooks/useCustomTheme';
+import useScreenSize from 'hooks/useScreenSize';
 
 type Props = PropsWithChildren<ViewProps>;
 

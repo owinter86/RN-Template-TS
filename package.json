@@ -1,6 +1,6 @@
 {
   "name": "react-native-template-owinter",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "React Native Starter project structure with typescript",
   "files": [
     "template",
@@ -24,8 +24,8 @@
   },
   "homepage": "https://github.com/owinter86/RN-Template-TS/issues#readme",
   "scripts": {
-    "lint": "eslint 'template/src/**/*.{ts,tsx}'",
-    "pretty": "prettier --check 'template/src/**/*.{ts,tsx}' --write",
+    "lint": "eslint 'template/**/*.{ts,tsx}'",
+    "pretty": "prettier --check 'template/**/*.{ts,tsx}' --write",
     "tsCheck": "tsc -p ./"
   }
 }

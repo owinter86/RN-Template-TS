@@ -1,8 +1,8 @@
 import React from 'react';
 import { Text, ActivityIndicator } from 'react-native';
-import { api } from 'src/api';
+import { api } from 'utils/api';
 import { useQuery } from 'react-query';
-import View from 'src/components/View';
+import View from 'components/View';
 
 const wait = () => new Promise((resolve) => setTimeout(() => resolve(), 3000));
 

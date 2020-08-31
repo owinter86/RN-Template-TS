@@ -2,7 +2,7 @@ import React from 'react';
 import { AppState, AppStateStatus } from 'react-native';
 import RNBootSplash from 'react-native-bootsplash';
 import codepush from 'react-native-code-push';
-import bugsnag from 'src/services/bugsnag';
+import bugsnag from 'services/bugsnag';
 
 export default function useCodepushCheck() {
   const checkCodepush = React.useCallback(async () => {

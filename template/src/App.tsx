@@ -5,12 +5,12 @@ import { ReactQueryConfigProvider } from 'react-query';
 import { enableScreens } from 'react-native-screens';
 import codepush from 'react-native-code-push';
 
-import initDevEnvironment from './utils/initDevEnvironment';
-import { globalReactQueryConfig, useSetupFocusHandling } from './api';
-import { ThemeProvider } from './hooks/useCustomTheme';
-// import useCodepushCheck from './hooks/useCodepush';
-import Home from './screens/Home';
+import { globalReactQueryConfig, useSetupFocusHandling } from 'utils/api';
+import { ThemeProvider } from 'hooks/useCustomTheme';
+// import useCodepushCheck from 'hooks/useCodepush';
+import Home from 'screens/Home';
 import RNBootSplash from 'react-native-bootsplash';
+import initDevEnvironment from 'utils/initDevEnvironment';
 
 enableScreens();
 initDevEnvironment();
