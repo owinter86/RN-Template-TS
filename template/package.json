@@ -21,7 +21,7 @@
     "@react-native-community/netinfo": "5.9.6",
     "@react-navigation/bottom-tabs": "5.8.0",
     "@react-navigation/native": "5.7.3",
-    "axios": "0.20.0",
+    "axios": "0.21.1",
     "bugsnag-react-native": "2.23.10",
     "jwt-decode": "2.2.0",
     "react": "16.13.1",
